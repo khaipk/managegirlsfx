@@ -15,10 +15,11 @@
       </ToolBar>
    </top>
    <bottom>
-      <Button mnemonicParsing="false" onAction="#goHome" prefWidth="80.0" text="HOME" BorderPane.alignment="CENTER">
-         <font>
-            <Font name="System Bold Italic" size="14.0" />
-         </font>
-      </Button>
+      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" lineSpacing="20.0" mnemonicParsing="false" onAction="#addGirl" prefWidth="80.0" text="ADD" />
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#goHome" prefWidth="80.0" text="HOME" />
+         </children>
+      </HBox>
    </bottom>
 </BorderPane>

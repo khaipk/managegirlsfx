@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.view.AddGirlController">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#addGirl" prefWidth="80.0" text="OK" />
+            <Button mnemonicParsing="false" onAction="#cancel" prefWidth="80.0" text="CANCEL" />
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Personal Infomations">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="21.0" layoutY="21.0" text="Fill in informations" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <GridPane layoutX="14.0" layoutY="80.0" prefHeight="188.0" prefWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="40.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="121.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="279.0" minWidth="10.0" prefWidth="260.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Name" />
+                              <Label text="Birthday" GridPane.rowIndex="1" />
+                              <Label text="Address" GridPane.rowIndex="2" />
+                              <Label text="Country" GridPane.rowIndex="3" />
+                              <TextField fx:id="field1" prefHeight="25.0" prefWidth="261.0" style="-fx-background-radius: 10;" GridPane.columnIndex="1" />
+                              <TextField fx:id="field2" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="field5" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="field6" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                        <Separator layoutX="100.0" layoutY="264.0" prefHeight="0.0" prefWidth="240.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="245.0" />
+                        <Label layoutX="20.0" layoutY="298.0" text="Day of Birth" />
+                        <DatePicker fx:id="field4" layoutX="135.0" layoutY="294.0" />
+                        <Label layoutX="20.0" layoutY="336.0" text="Age" />
+                        <TextField fx:id="field3" layoutX="135.0" layoutY="332.0" onMouseClicked="#showAge" prefHeight="25.0" prefWidth="56.0" style="-fx-background-radius: 10;" />
+                        <RadioButton layoutX="20.0" layoutY="375.0" mnemonicParsing="false" selected="true" text="Alone">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="status" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton layoutX="135.0" layoutY="375.0" mnemonicParsing="false" text="Loved" toggleGroup="$status" />
+                        <RadioButton layoutX="247.0" layoutY="375.0" mnemonicParsing="false" text="Married" toggleGroup="$status" />
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Job Informations">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                     <children>
+                        <Label text="Job Informations" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutY="60.0" prefHeight="2.0" prefWidth="400.0" />
+                        <GridPane layoutX="40.0" layoutY="66.0" prefHeight="223.0" prefWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="46.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="154.0" minWidth="10.0" prefWidth="109.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="254.0" minWidth="10.0" prefWidth="251.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Height" />
+                              <Label text="Weight" GridPane.rowIndex="1" />
+                              <Label text="Body" GridPane.rowIndex="2" />
+                              <Label text="Quality" GridPane.rowIndex="3" />
+                              <Label text="Full Service" GridPane.rowIndex="5" />
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <TextField prefHeight="25.0" prefWidth="40.0" style="-fx-background-radius: 10;" />
+                                    <TextField prefWidth="40.0" style="-fx-background-radius: 10;" />
+                                    <TextField alignment="CENTER" prefWidth="40.0" style="-fx-background-radius: 10;" />
+                                    <Label text="cm" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <children>
+                                    <CheckBox fx:id="yesBox" mnemonicParsing="false" onAction="#checkYes" text="Yes" />
+                                    <CheckBox fx:id="noBox" mnemonicParsing="false" onAction="#checkNo" text="No" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </HBox>
+                              <ComboBox fx:id="qualityJob" onAction="#chooseQuality" prefHeight="25.0" prefWidth="179.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label text="Sub" GridPane.rowIndex="4" />
+                              <ComboBox fx:id="qualitySub" prefHeight="25.0" prefWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <TextField fx:id="weightField" prefHeight="25.0" prefWidth="69.0" style="-fx-background-radius: 10;" />
+                                    <Label text="kg" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-background-radius: 10;" GridPane.columnIndex="1">
+                                 <children>
+                                    <TextField fx:id="heightField" prefHeight="25.0" prefWidth="69.0" style="-fx-background-radius: 10;" />
+                                    <Label text="cm" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </GridPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
